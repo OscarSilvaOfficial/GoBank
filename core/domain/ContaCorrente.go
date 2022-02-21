@@ -48,6 +48,10 @@ func (conta *ContaCorrente) Saldo() float64 {
 	return conta.saldo
 }
 
+func (conta *ContaCorrente) Titular() *Pessoa {
+	return &conta.titular
+}
+
 func (conta *ContaCorrente) SetTitular(pessoa Pessoa) *ContaCorrente {
 	conta.titular = pessoa
 	return conta

@@ -1,8 +1,6 @@
 package domain
 
 import (
-	"fmt"
-
 	"github.com/OscarSilvaOfficial/GoBank/port"
 )
 
@@ -29,12 +27,8 @@ func (trenferencia *Transferencia) SetContaDestino(contaDestino port.ContaContra
 	return trenferencia
 }
 
-func (transferencia *Transferencia) Transferir(valor float64) {
-	fmt.Println("\n>>>>>>> TRANSFERÊNCIA")
-	fmt.Printf("Saldo da conta que fará a transferência R$%.2f\n", transferencia.contaOrigem.Saldo())
-	fmt.Printf("Saldo da conta que receberá a transferência R$%.2f\n", transferencia.contaDestino.Saldo())
+func (transferencia *Transferencia) Transferir(valor float64) Transferencia {
 	transferencia.contaOrigem.Sacar(valor)
 	transferencia.contaDestino.Depositar(valor)
-	fmt.Printf("Saldo da conta que fez a transferência R$%.2f\n", transferencia.contaOrigem.Saldo())
-	fmt.Printf("Saldo da conta que recebeu a transferência R$%.2f\n", transferencia.contaDestino.Saldo())
+	return *transferencia
 }
