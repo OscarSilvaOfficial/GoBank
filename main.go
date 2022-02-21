@@ -3,13 +3,13 @@ package main
 import (
 	"fmt"
 
-	"github.com/OscarSilvaOfficial/GoBank/factory"
+	"github.com/OscarSilvaOfficial/GoBank/core/factory"
 )
 
 func main() {
 	contaCorrenteOscar := factory.FactoryContaCorrente("Oscar", "07244444444", 000, 1111103, 1000.0)
 	contaCorrenteDondi := factory.FactoryContaCorrente("Dondi", "07244444441", 000, 12321309, 1000.0)
-	contaCorrenteBla   := factory.FactoryContaCorrente("Bla", "07244444443", 001, 03210312, 1000.0)
+	contaCorrenteBla := factory.FactoryContaCorrente("Bla", "07244444443", 001, 03210312, 1000.0)
 
 	fmt.Println("\n>>>>>>> CONTAS ABERTAS")
 	fmt.Println("Conta Oscar", contaCorrenteOscar)

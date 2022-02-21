@@ -1,7 +1,7 @@
 package factory
 
 import (
-	"github.com/OscarSilvaOfficial/GoBank/domain"
+	"github.com/OscarSilvaOfficial/GoBank/core/domain"
 	"github.com/OscarSilvaOfficial/GoBank/port"
 )
 

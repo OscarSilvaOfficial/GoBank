@@ -33,7 +33,6 @@ func (conta *ContaCorrente) ValidaDeposito(valor float64) bool {
 func (conta *ContaCorrente) Sacar(valor float64) float64 {
 	if conta.ValidaSac(valor) {
 		conta.saldo -= valor
-		fmt.Println("Saque efetuado")
 	}
 	return conta.saldo
 }
@@ -41,7 +40,6 @@ func (conta *ContaCorrente) Sacar(valor float64) float64 {
 func (conta *ContaCorrente) Depositar(valor float64) float64 {
 	if conta.ValidaDeposito(valor) {
 		conta.saldo += valor
-		fmt.Println("Deposito realizado")
 	}
 	return conta.saldo
 }
